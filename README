@@ -10,4 +10,4 @@ SLP: Single Layer Perceptrons
 	|
 	-> SLPnn_exp.c			
 	-> SLPnn_twice.c
-	->
+	-> SPLnn_sine.c
