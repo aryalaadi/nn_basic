@@ -39,7 +39,7 @@ int main(void) {
 		dataset[i][1] = pow(i,2);				// f(x) = x^2
 	}
 
-	double w = (double)rand()/(double)RAND_MAX*4;			// Random initial weight 
+	double w = 3.5;			// Random initial weight 
 
 	double h = 1e-5;						// Infinitesimal approx for derivatives 
 	double rate = 1e-3;						// Rate of training
@@ -48,7 +48,7 @@ int main(void) {
 	for (int era = 0; era<256; era++) { 				// Training loop 
 		dw = (cost(w+h)-cost(w))/h;				// Infinitesmial change in MSE 
 		w -= dw*rate;						// Adjusting weight based on change in MSE
-		printf("era %d dcost %lf w %lf\n", era, dw, w);		// https://en.wikipedia.org/wiki/Gradient_descent
+		printf("%lf\n", w);		// https://en.wikipedia.org/wiki/Gradient_descent
 	}
 }
 
